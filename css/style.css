@@ -1,0 +1,160 @@
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+
+
+    font-size:18px;
+}
+
+@font-face{
+    font-family: KumbhSans400;
+    src:url("../fonts/KumbhSans400.ttf");
+}
+
+@font-face{
+    font-family: KumbhSans700;
+    src:url("../fonts/KumbhSans700.ttf");
+}
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-weight: normal;
+}
+
+ body{
+     
+    overflow: hidden;
+    height: 100vh;
+    background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg"),var(--Dark-cyan);
+    /* Stole(and tweeked) the background-position from 
+
+ApplePieGiraffe
+
+ */
+    background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left calc(43vw + 5%) top calc(40vh + 10vw);
+
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+        main{
+            position: relative;
+            width:21.5rem;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 30px 190px -65px black;
+        }
+        .card-background{
+            background-size: cover;
+            min-height:9rem;
+            background-image: url("../images/bg-pattern-card.svg");
+            border-radius: 15px 15px 0 0;
+        }
+        .profile-pic{
+            position: absolute;
+            z-index: 2;
+            display: block;
+            border-radius: 50%;
+            border:6px solid white;
+            left:50%;
+            top:105px;
+            transform: translateX(-50%);
+        }
+
+        section.name-age-city{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+                h1{
+                    font-family: KumbhSans700;
+                    font-size: 1.1rem;
+                    color: var(--Very-dark-desaturated-blue);
+                    display: inline;
+                }
+                span{
+                    display: inline-block;
+                    padding-left: 8px;
+                    font-family: KumbhSans400;
+                    color:var(--Dark-grayish-blue);
+                }
+                .city-london{
+                    font-family: KumbhSans400;
+                    color:var(--Dark-grayish-blue);
+                    margin: 10px 0 30px 0;
+                    font-size: .9rem;
+
+                }
+
+
+
+
+
+        .stats{
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            padding:1.5rem 10px 0 10px;
+            width:100%;
+            justify-content: space-around;
+            position: relative;
+
+            
+            
+            
+        }
+        .stats::before{
+            position:absolute;
+            top:0;
+            content: " ";
+            display: block;
+            width:100%;
+            height:2px;
+            background-color: var(--Dark-gray);
+            opacity: .2;
+        }
+                ul{
+                    list-style: none;
+                    text-align: center;
+                }
+
+                li.number{
+                    font-family: KumbhSans700;
+                    font-size: 1.1rem;
+                    color: var(--Very-dark-desaturated-blue);
+                }
+                li.text{
+                    font-family: KumbhSans400;
+                    font-size: .7rem;
+                    color:var(--Dark-grayish-blue);
+                    letter-spacing: 1.7px;
+                    margin-top:5px;
+
+                }
+
+
+
+/*  background */
+
+
+
+
+footer{
+    position: absolute;
+    top:0;
+    
+}
+
+
+.attribution { font-size: 13px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
